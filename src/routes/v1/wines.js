@@ -8,6 +8,9 @@ const isLoggedIn = require('../../middleware/auth');
 
 const router = express.Router();
 
+// to get all wines: http://164.92.253.153:8080/v1/wines
+// to use pageination: http://164.92.253.153:8080/v1/wines?page=1&limit=3
+
 router.get('/', async (req, res) => {
   try {
     const con = await mysql.createConnection(mysqlConfig);
